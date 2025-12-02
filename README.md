@@ -107,7 +107,3 @@ For more details on the structured data protocols used in these examples, explor
 ## ⚖️ License
 
 MIT Licensed - See [LICENSE](LICENSE) for details.
-
----
-
-⚡ Maintained by [@theEvilGrinch](https://github.com/theEvilGrinch)
