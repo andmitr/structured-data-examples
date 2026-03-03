@@ -1,8 +1,7 @@
 # Structured Data Examples
 
-Repository provides practical examples of structured data markup using [Schema.org](https://schema.org) and [Open 
-Graph](https://ogp.me/) protocols. Examples are designed to help developers implement structured data on their 
-websites to improve SEO, enable rich snippets in search results, and enhance social media sharing.
+This repository provides practical examples of structured data markup using [Schema.org](https://schema.org) and [Open 
+Graph](https://ogp.me/) protocols, helping developers improve SEO, enable rich snippets in search results, and enhance social media sharing. 
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&logo=opensource)](LICENSE)
 
@@ -18,7 +17,6 @@ websites to improve SEO, enable rich snippets in search results, and enhance soc
 - [Usage](#usage)
 - [Validation](#validation)
 - [Resources](#resources)
-- [Sponsorship](#sponsorship)
 - [License](#license)
 
 ## Introduction
@@ -107,19 +105,6 @@ For more details on the structured data protocols used in these examples, explor
 - **[Schema.org](https://schema.org)** - Comprehensive vocabulary for structured data markup.
 - **[Open Graph](https://ogp.me/)** - Protocol for enhancing social media sharing.
 - **[Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards)** - Twitter-specific markup for rich media previews.
-
-## Sponsorship
-
-[![Boosty](https://img.shields.io/badge/Boosty-F15F2C?style=for-the-badge&logo=boosty&logoColor=white)![Support](https://img.shields.io/badge/Support%20me-grey?style=for-the-badge)](https://boosty.to/andmitr/donate) 
-
-![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A?style=flat&logo=bitcoin&logoColor=white&logoSize=auto) 
-```
-1CCnwAvJYEoDVGM7vsBg2Q99cF9EHtBVaY
-```
-![Tether](https://img.shields.io/badge/Tether%20(USDT%20ETH)-168363?style=flat&logo=tether&logoColor=white&logoSize=auto) 
-```
-0x54f0ccc6b2987de454f69f2814fc9202bcfb74fe
-```
 
 ## License
 
