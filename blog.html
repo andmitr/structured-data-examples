@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Article Title - Blog Name</title>
   <script type="application/ld+json">
-    {
+    [{
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Article Title",
@@ -27,30 +27,31 @@
         "width": 1200,
         "height": 630
       },
-      "keywords": "keyword1, keyword2",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "name": "Main navigation",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": "1",
-            "item": {
-              "@id": "https://example.com/index.html",
-              "name": "Main page"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": "2",
-            "item": {
-              "@id": "https://example.com/index.html",
-              "name": "Article page"
-            }
+      "keywords": "keyword1, keyword2"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "name": "Main navigation",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://example.com/index.html",
+            "name": "Main page"
           }
-        ]
-      }
-    }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://example.com/article-url",
+            "name": "Article page"
+          }
+        }
+      ]
+    }]
   </script>
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Article Title">
