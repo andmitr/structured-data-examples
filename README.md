@@ -25,13 +25,13 @@ Structured data markup helps search engines and social platforms understand the 
 - Boost SEO with rich snippets (e.g., product prices, ratings, or business details in search results).
 - Ensure proper rendering of shared links on platforms like Facebook, Twitter, and LinkedIn.
 
-This repository contains three example files demonstrating structured data for common use cases: a product landing page, a service landing page, and a blog article page.
+This repository contains five example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, and an online cinema page.
 
 ## Included Files
 
 ### Product Landing Page
 
-- **File**: `product-landing-page.html`
+- **File**: `product-landing.html`
 - **Description**: This example showcases structured data for an e-commerce product page using Schema.org `Product` type and Open Graph's `product` type.
 - **Key Features**:
   - **Schema.org**: Includes product details such as name, image, description, brand, SKU, offers (with pricing and availability), shipping details, return policy, and reviews.
@@ -40,7 +40,7 @@ This repository contains three example files demonstrating structured data for c
 
 ### Service Landing Page
 
-- **File**: `service-landing-page.html`
+- **File**: `service-landing.html`
 - **Description**: This example demonstrates structured data for a local service provider (e.g., computer repair) using Schema.org `LocalBusiness` type and Open Graph's `website` type.
 - **Key Features**:
   - **Schema.org**: Provides business details like name, address, phone, email, opening hours, services offered, pricing range, and customer reviews.
@@ -79,7 +79,7 @@ This repository contains three example files demonstrating structured data for c
 To use these examples:
 1. Clone or download this repository: 
 ```zsh
-   git clone https://github.com/theEvilGrinch/structured-data-examples.git  
+   git clone https://github.com/andmitr/structured-data-examples.git  
 ```
 2. Open the HTML files in a text editor or browser to review the markup.
 3. Customize the structured data by replacing placeholder values (e.g., URLs, names, prices) with your own content.
