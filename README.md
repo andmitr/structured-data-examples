@@ -14,6 +14,7 @@ Graph](https://ogp.me/) protocols, helping developers improve SEO, enable rich s
   - [Blog Article Page](#blog-article-page)
   - [Tech Blog Article Page](#tech-blog-article-page)
   - [Online Cinema Page](#online-cinema-page)
+  - [Author Profile Page](#author-profile-page)
 - [Usage](#usage)
 - [Validation](#validation)
 - [Resources](#resources)
@@ -25,7 +26,7 @@ Structured data markup helps search engines and social platforms understand the 
 - Boost SEO with rich snippets (e.g., product prices, ratings, or business details in search results).
 - Ensure proper rendering of shared links on platforms like Facebook, Twitter, and LinkedIn.
 
-This repository contains five example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, and an online cinema page.
+This repository contains six example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, an online cinema page, and an author profile page.
 
 ## Included Files
 
@@ -73,6 +74,15 @@ This repository contains five example files demonstrating structured data for co
   - **Schema.org**: Includes movie details such as name, description, actors, director, duration, ratings, reviews, and a nested `VideoObject` with video-specific properties like thumbnail, upload date, and interaction statistics. It also features a `BreadcrumbList` for navigation.
   - **Open Graph**: Uses `og:type="video.movie"` with properties like `og:title`, `og:description`, `og:image`, and video-specific tags such as `video:actor`, `video:director`, and `video:duration`.
 - **Use Case**: Ideal for online cinema or streaming websites aiming to enhance SEO with rich video snippets, improve discoverability, and optimize social media sharing.
+
+### Author Profile Page
+
+- **File**: `author-profile.html`
+- **Description**: This example demonstrates structured data for an author "About" page using Schema.org `ProfilePage` type and Open Graph's `profile` type.
+- **Key Features**:
+  - **Schema.org**: Defines a `mainEntity` `Person` with name, description, image, and `sameAs` links, plus `hasPart` linking the profile to the author's articles in `blog.html` and `tech-blog.html`.
+  - **Open Graph**: Uses `og:type="profile"` with `profile:first_name`, `profile:last_name`, and `profile:username`.
+- **Use Case**: Ideal for author bio or "About Me" pages that blog articles link to via `article:author`, making the author eligible for Google's Profile Page appearance.
 
 ## Usage
 

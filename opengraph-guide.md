@@ -62,7 +62,7 @@ This guide provides a detailed explanation of all Open Graph protocol fields and
   This tag indicates the last modification date of the blog post in ISO 8601 format with UTC (e.g., "2025-04-03T12:00:00Z"). It ensures the most recent update is reflected.
 
 - **`article:author`** (Used in `blog.html`, `tech-blog.html`)  
-  This tag provides a URL for the blog post’s author, such as "https://example.com/about" in these files. Per the Open Graph standard, it should link to an Open Graph profile (e.g., with `og:type="profile"`), but a plain URL is used here. It credits the writer on social media.
+  This tag provides a URL for the blog post’s author, such as "https://example.com/about" in these files. Per the Open Graph standard, it should link to an Open Graph profile (`og:type="profile"`), which `author-profile.html` demonstrates for that same URL. It credits the writer on social media.
 
 - **`article:section`** (Used in `blog.html`, `tech-blog.html`)  
   This tag categorizes the article, such as "Category" or "Code Optimization Techniques". It helps organize content on social platforms.
