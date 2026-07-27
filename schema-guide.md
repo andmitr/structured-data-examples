@@ -1,16 +1,16 @@
 # Schema.org Guide
 
-This guide provides a detailed explanation of all Schema.org properties used in the `structured-data-examples` repository, specifically within `product-landing-page.html`, `service-landing-page.html`, `online-cinema.html`, `blog.html`, and `tech-blog.html`. Schema.org markup improves how search engines like Google understand and display your web content, such as showing prices, reviews, or maps in search results. All descriptions are based on the official [Schema.org documentation](https://schema.org) (last updated April 2025) and incorporate practical recommendations from Google where applicable. They are crafted to be clear, detailed, and useful for anyone working with these files. This guide avoids examples and focuses on comprehensive, beginner-friendly explanations, adhering to modern web standards.
+This guide provides a detailed explanation of all Schema.org properties used in the `structured-data-examples` repository, specifically within `product-landing.html`, `service-landing.html`, `online-cinema.html`, `blog.html`, and `tech-blog.html`. Schema.org markup improves how search engines like Google understand and display your web content, such as showing prices, reviews, or maps in search results. All descriptions are based on the official [Schema.org documentation](https://schema.org) (last updated April 2025) and incorporate practical recommendations from Google where applicable. They are crafted to be clear, detailed, and useful for anyone working with these files. This guide avoids examples and focuses on comprehensive, beginner-friendly explanations, adhering to modern web standards.
 
 ## Table of Contents
 
-1. [Properties for `Product` (Used in `product-landing-page.html`)](#properties-for-product-used-in-product-landing-pagehtml)  
-2. [Properties for `LocalBusiness` (Used in `service-landing-page.html`)](#properties-for-localbusiness-used-in-service-landing-pagehtml)  
+1. [Properties for `Product` (Used in `product-landing.html`)](#properties-for-product-used-in-product-landinghtml)  
+2. [Properties for `LocalBusiness` (Used in `service-landing.html`)](#properties-for-localbusiness-used-in-service-landinghtml)  
 3. [Properties for `BlogPosting` (Used in `blog.html`)](#properties-for-blogposting-used-in-bloghtml)  
 4. [Properties for `TechArticle` (Used in `tech-blog.html`)](#properties-for-techarticle-used-in-tech-bloghtml)
 5. [Properties for `Movie` and `VideoObject` (Used in `online-cinema.html`)](#properties-for-movie-and-videoobject-used-in-online-cinemahtml)
 
-## Properties for `Product` (Used in `product-landing-page.html`)
+## Properties for `Product` (Used in `product-landing.html`)
 
 - **`@context`**  
   This tag specifies the JSON-LD context, set to "https://schema.org". It is a required element that tells search engines which vocabulary to use, ensuring the markup is recognized and processed correctly according to Schema.org standards.
@@ -64,13 +64,15 @@ This guide provides a detailed explanation of all Schema.org properties used in 
   - `handlingTime`: A nested object with `@type` set to "QuantitativeValue", including `maxValue` (maximum handling days, e.g., 2), indicating preparation time.
   - `transitTime`: A nested object with `@type` set to "QuantitativeValue", including `minValue` (minimum transit days, e.g., 3) and `maxValue` (maximum transit days, e.g., 5), outlining shipping duration.
 
-- **`returnPolicy`**  
+- **`hasMerchantReturnPolicy`**  
   This field details the return policy through a nested object with `@type` set to "MerchantReturnPolicy". It includes the following subfields to clarify return terms:
   - `returnPolicyCategory`: A Schema.org URL (e.g., "https://schema.org/MerchantReturnFiniteReturnWindow"), indicating the type of return policy.
-  - `merchantReturnDays`: Specifies the number of days allowed for returns (e.g., 30), defining the return window.
-  - `returnShippingFeesAmount`: A nested object with `@type` set to "MonetaryAmount", containing `value` (return shipping fee, e.g., 2.99) and `currency` (ISO 4217 format, e.g., "USD"), detailing associated costs.
+  - `merchantReturnDays`: Specifies the number of days allowed for returns (e.g., 14), defining the return window.
+  - `returnFees`: A Schema.org URL (e.g., "https://schema.org/FreeReturn"), indicating who bears the cost of return shipping.
+  - `returnMethod`: A Schema.org URL (e.g., "https://schema.org/ReturnByMail"), indicating how the item must be returned.
+  - `applicableCountry`: The country code using ISO 3166-1 (e.g., "RU"), specifying where the policy applies.
 
-## Properties for `LocalBusiness` (Used in `service-landing-page.html`)
+## Properties for `LocalBusiness` (Used in `service-landing.html`)
 
 - **`@context`**  
   This tag specifies the JSON-LD context, set to "https://schema.org". It is a required element that ensures search engines recognize the Schema.org vocabulary.
@@ -156,18 +158,13 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 - **`keywords`**  
   This field lists relevant keywords in a comma-separated string (e.g., "cooking, pasta, recipe"). It helps search engines categorize and index the content effectively.
 
-- **`publisher`**  
-  This field identifies the publishing entity through a nested object with `@type` set to "Organization". It includes the following subfields:  
-  - `name`: The name of the organization publishing the content (e.g., "Food Blog Network").  
-  - `logo`: A nested object with `@type` set to "ImageObject" that specifies the organization’s logo, containing `url` (the logo URL), `width` (e.g., 600 pixels), and `height` (e.g., 60 pixels).
-
 - **`mainEntityOfPage`**  
   This field links to the canonical page through a nested object with `@type` set to "WebPage". It includes:
   - `@id`: The canonical URL of the blog post (e.g., "https://example.com/blog/pasta").
 
-- **`breadcrumb`**  
-  This field defines the navigation path through a nested object with `@type` set to "BreadcrumbList". It includes:
-  - `itemListElement`: An array of objects with `@type` set to "ListItem", each containing `position` (a number indicating order, e.g., 1), `name` (e.g., "Home" or "Blog"), and `item` (the URL for that step).
+- **`BreadcrumbList`**  
+  Google's Breadcrumb rich result requires `BreadcrumbList` to be its own top-level item, not a nested property of `BlogPosting`. In `blog.html` it is declared as a second object alongside `BlogPosting`, inside the same JSON-LD array. It includes:
+  - `itemListElement`: An array of objects with `@type` set to "ListItem", each containing `position` (an Integer indicating order, e.g., 1), and `item` (an object with `@id` for the step's URL and `name` for its label).
 
 ## Properties for `TechArticle` (Used in `tech-blog.html`)
 
@@ -259,9 +256,9 @@ This guide provides a detailed explanation of all Schema.org properties used in 
   - "Review": Evaluations or critiques.
   - "Instructional": How-to or procedural content.
 
-- **`breadcrumb`**  
-  This field defines the navigation path through a nested object with `@type` set to "BreadcrumbList". It includes:
-  - `itemListElement`: An array of objects with `@type` set to "ListItem", each containing `position` (e.g., 1), `name` (e.g., "Home"), and `item` (the corresponding URL).
+- **`BreadcrumbList`**  
+  Google's Breadcrumb rich result requires `BreadcrumbList` to be its own top-level item, not a nested property of `TechArticle`. In `tech-blog.html` it is declared as a second object alongside `TechArticle`, inside the same JSON-LD array. It includes:
+  - `itemListElement`: An array of objects with `@type` set to "ListItem", each containing `position` (an Integer indicating order, e.g., 1), and `item` (an object with `@id` for the step's URL and `name` for its label).
 
 ## Properties for `Movie` and `VideoObject` (Used in `online-cinema.html`)
 
