@@ -15,6 +15,7 @@ Graph](https://ogp.me/) protocols, helping developers improve SEO, enable rich s
   - [Tech Blog Article Page](#tech-blog-article-page)
   - [Online Cinema Page](#online-cinema-page)
   - [Author Profile Page](#author-profile-page)
+  - [Software Review Page](#software-review-page)
 - [Usage](#usage)
 - [Validation](#validation)
 - [Resources](#resources)
@@ -26,7 +27,7 @@ Structured data markup helps search engines and social platforms understand the 
 - Boost SEO with rich snippets (e.g., product prices, ratings, or business details in search results).
 - Ensure proper rendering of shared links on platforms like Facebook, Twitter, and LinkedIn.
 
-This repository contains six example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, an online cinema page, and an author profile page.
+This repository contains seven example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, an online cinema page, an author profile page, and a software review page.
 
 ## Included Files
 
@@ -83,6 +84,15 @@ This repository contains six example files demonstrating structured data for com
   - **Schema.org**: Defines a `mainEntity` `Person` with name, description, image, and `sameAs` links, plus `hasPart` linking the profile to the author's articles in `blog.html` and `tech-blog.html`.
   - **Open Graph**: Uses `og:type="profile"` with `profile:first_name`, `profile:last_name`, and `profile:username`.
 - **Use Case**: Ideal for author bio or "About Me" pages that blog articles link to via `article:author`, making the author eligible for Google's Profile Page appearance.
+
+### Software Review Page
+
+- **File**: `software-review.html`
+- **Description**: This example demonstrates structured data for an editorial software review article using Schema.org `Review` as the primary type, with `itemReviewed` pointing to a `SoftwareApplication`. It also includes an `FAQPage` and a `BreadcrumbList`.
+- **Key Features**:
+  - **Schema.org**: A top-level `Review` with `author`, `reviewRating`, `reviewBody`, and the `positiveNotes`/`negativeNotes` pros-and-cons lists that Google's product snippet feature supports for editorial reviews.
+  - **Open Graph**: Uses `og:type="article"` with standard title, description, and image tags.
+- **Use Case**: Ideal for independent review articles about software or services, aiming for Google's review rich result (star rating) and pros/cons appearance in search.
 
 ## Usage
 
