@@ -1,161 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns# product: http://ogp.me/ns/product#">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Landing Page</title>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Super Amazing Product",
-      "image": "https://www.example.com/product-image.jpg",
-      "description": "This is a super amazing product that will change your life.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Amazing Brand"
-      },
-      "sku": "12345",
-      "mpn": "67890",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.example.com/product-page",
-        "priceCurrency": "RUB",
-        "price": "2999.99",
-        "priceValidUntil": "2026-12-31",
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "LocalBusiness",
-          "name": "Amazing Brand Store",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Business Street",
-            "addressLocality": "Moscow",
-            "addressRegion": "Moscow Region",
-            "postalCode": "101000",
-            "addressCountry": "RU"
-          },
-          "telephone": "+7-495-123-4567",
-          "url": "https://www.example.com",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 55.7558,
-            "longitude": 37.6173
-          },
-          "priceRange": "1000-5000 RUB",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "09:00",
-              "closes": "18:00"
-            }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/mycompany",
-            "https://twitter.com/mycompany"
-          ],
-          "image": "https://www.example.com/store-logo.jpg"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Super Amazing Product",
+        "image": "https://www.example.com/product-image.jpg",
+        "description": "This is a super amazing product that will change your life.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Amazing Brand"
         },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "deliveryMethod": {
-            "@type": "DeliveryMethod",
-            "name": "Mail",
-            "url": "https://www.example.com/shipping-info"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "RU"
-          },
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "currency": "RUB",
-            "value": "250.00"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 1,
-              "maxValue": 2,
-              "unitCode": "DAY"
+        "sku": "12345",
+        "mpn": "67890",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.example.com/product-page",
+          "priceCurrency": "USD",
+          "price": "39.99",
+          "priceValidUntil": "2026-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "LocalBusiness",
+            "name": "Amazing Brand Store",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4521 Spring Mountain Rd",
+              "addressLocality": "Las Vegas",
+              "addressRegion": "NV",
+              "postalCode": "89103",
+              "addressCountry": "US"
             },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 3,
-              "maxValue": 5,
-              "unitCode": "DAY"
+            "telephone": "+1-702-555-0123",
+            "url": "https://www.example.com",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 36.1147,
+              "longitude": -115.1728
+            },
+            "priceRange": "$10-50",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "sameAs": ["https://www.facebook.com/mycompany", "https://twitter.com/mycompany"],
+            "image": "https://www.example.com/store-logo.jpg"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "deliveryMethod": {
+              "@type": "DeliveryMethod",
+              "name": "Mail",
+              "url": "https://www.example.com/shipping-info"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "US"
+            },
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "currency": "USD",
+              "value": "250.00"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 2,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnFees": "https://schema.org/FreeReturn",
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "applicableCountry": "US",
+            "merchantReturnDays": 14,
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"
           }
         },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "returnFees": "https://schema.org/FreeReturn",
-          "returnMethod": "https://schema.org/ReturnByMail",
-          "applicableCountry": "RU",
-          "merchantReturnDays": 14,
-          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": "150"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "John Doe"
-          },
-          "datePublished": "2024-05-01",
-          "reviewBody": "This product is fantastic! It changed my life.",
-          "name": "Great product!",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "reviewCount": "150"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "John Doe"
+            },
+            "datePublished": "2024-05-01",
+            "reviewBody": "This product is fantastic! It changed my life.",
+            "name": "Great product!",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
           }
-        }
-      ]
-    }
-  </script>
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Super Amazing Product">
-  <meta property="og:description" content="This is a super amazing product that will change your life.">
-  <meta property="og:url" content="https://www.example.com/product-page">
-  <meta property="og:type" content="product">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:price:amount" content="2999.99">
-  <meta property="og:price:currency" content="RUB">
-  <meta property="og:availability" content="InStock">
-  <meta property="og:brand" content="Amazing Brand">
-  <meta property="og:sku" content="12345">
-  <meta property="og:product:category" content="Electronics">
-  <meta property="og:product:condition" content="New">
-  <meta property="og:image" content="https://www.example.com/product-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Amazing Brand">
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@amazingbrand">
-  <meta name="twitter:title" content="Super Amazing Product">
-  <meta name="twitter:description" content="This is a super amazing product that will change your life.">
-  <meta name="twitter:image" content="https://www.example.com/product-image.jpg">
-  <meta name="twitter:image:alt" content="Super Amazing Product">
-</head>
-<body>
-<!-- Content of the landing page -->
-</body>
+        ]
+      }
+    </script>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Super Amazing Product" />
+    <meta property="og:description" content="This is a super amazing product that will change your life." />
+    <meta property="og:url" content="https://www.example.com/product-page" />
+    <meta property="og:type" content="product" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:price:amount" content="2999.99" />
+    <meta property="og:price:currency" content="USD" />
+    <meta property="og:availability" content="InStock" />
+    <meta property="og:brand" content="Amazing Brand" />
+    <meta property="og:sku" content="12345" />
+    <meta property="og:product:category" content="Electronics" />
+    <meta property="og:product:condition" content="New" />
+    <meta property="og:image" content="https://www.example.com/product-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Amazing Brand" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@amazingbrand" />
+    <meta name="twitter:title" content="Super Amazing Product" />
+    <meta name="twitter:description" content="This is a super amazing product that will change your life." />
+    <meta name="twitter:image" content="https://www.example.com/product-image.jpg" />
+    <meta name="twitter:image:alt" content="Super Amazing Product" />
+  </head>
+  <body>
+    <!-- Content of the landing page -->
+  </body>
 </html>

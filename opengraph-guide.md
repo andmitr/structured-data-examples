@@ -17,7 +17,7 @@ This guide provides a detailed explanation of all Open Graph protocol fields and
   This tag defines the content type, informing social media platforms about the nature of the content and influencing the card layout. (Used in `product-landing.html`, `service-landing.html`, `blog.html`, `tech-blog.html`)
 
 - **`og:locale`**  
-  This tag specifies the language and region using a code like "en_US" (English, United States) or "ru_RU" (Russian, Russia), based on the IETF language tag standard. It tailors the content presentation to the intended audience. (Used in `product-landing.html`, `service-landing.html`, `blog.html`, `tech-blog.html`)
+  This tag specifies the language and region using a code like "en_US" (English, United States), based on the IETF language tag standard. It tailors the content presentation to the intended audience. (Used in `product-landing.html`, `service-landing.html`, `blog.html`, `tech-blog.html`)
 
 - **`og:image`**  
   This tag contains the URL of the content’s image. It must be in JPEG, PNG, GIF, or WebP format, with a minimum resolution of 50x50 pixels (recommended 1200x630 with aspect ratio 1.91:1), and a maximum file size of 8MB to ensure fast loading. The image must be publicly accessible without requiring authentication. (Used in `product-landing.html`, `service-landing.html`, `blog.html`, `tech-blog.html`, `online-cinema.html`)
@@ -38,7 +38,7 @@ This guide provides a detailed explanation of all Open Graph protocol fields and
   This tag defines the product’s price as a number, such as 2999.99 or 2999. It is crucial for displaying the cost on social media platforms.
 
 - **`og:price:currency`** (Used in `product-landing.html`)  
-  This tag specifies the currency using the ISO 4217 standard, such as "RUB". It ensures the price is presented in the correct monetary unit.
+  This tag specifies the currency using the ISO 4217 standard, such as "USD". It ensures the price is presented in the correct monetary unit.
 
 - **`og:availability`** (Used in `product-landing.html`)  
   This tag indicates the product’s stock status, with values like "instock" or "outofstock". In `product-landing.html`, it uses "InStock". It informs users whether the item is currently available for purchase.

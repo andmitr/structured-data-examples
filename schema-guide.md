@@ -35,7 +35,7 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 
 - **`offers`**  
   This field describes the commercial offer for the product using a nested object with `@type` set to "Offer". It includes the following subfields, each critical for e-commerce visibility:
-  - `priceCurrency`: Specifies the currency code using the ISO 4217 standard (e.g., "USD" for U.S. dollars, "RUB" for Russian rubles), a mandatory field for price interpretation.
+  - `priceCurrency`: Specifies the currency code using the ISO 4217 standard (e.g., "USD" for U.S. dollars), a mandatory field for price interpretation.
   - `price`: Indicates the product’s price as a decimal number (e.g., 29.99), essential for displaying cost in rich snippets.
   - `availability`: Denotes the stock status using a Schema.org URL (e.g., "https://schema.org/InStock" or "https://schema.org/OutOfStock"), vital for informing users of availability.
   - `priceValidUntil`: Sets the expiration date of the price, formatted in ISO 8601 (e.g., "2025-12-31"), ensuring the price remains accurate over time.
@@ -70,7 +70,7 @@ This guide provides a detailed explanation of all Schema.org properties used in 
   - `merchantReturnDays`: Specifies the number of days allowed for returns (e.g., 14), defining the return window.
   - `returnFees`: A Schema.org URL (e.g., "https://schema.org/FreeReturn"), indicating who bears the cost of return shipping.
   - `returnMethod`: A Schema.org URL (e.g., "https://schema.org/ReturnByMail"), indicating how the item must be returned.
-  - `applicableCountry`: The country code using ISO 3166-1 (e.g., "RU"), specifying where the policy applies.
+  - `applicableCountry`: The country code using ISO 3166-1 (e.g., "US"), specifying where the policy applies.
 
 ## Properties for `LocalBusiness` (Used in `service-landing.html`)
 
@@ -89,13 +89,13 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 - **`address`**  
   This field details the physical location through a nested object with `@type` set to "PostalAddress". It includes:
   - `streetAddress`: The street name and number (e.g., "123 Main St").
-  - `addressLocality`: The city or locality name (e.g., "Moscow").
-  - `addressRegion`: The state or region code (e.g., "Moscow Region").
+  - `addressLocality`: The city or locality name (e.g., "Las Vegas").
+  - `addressRegion`: The state or region code (e.g., "NV").
   - `postalCode`: The postal code (e.g., "12345").
-  - `addressCountry`: The country code using ISO 3166-1 (e.g., "RU").
+  - `addressCountry`: The country code using ISO 3166-1 (e.g., "US").
 
 - **`telephone`**  
-  This field specifies the business phone number in international format (e.g., "+7-495-123-4567"). It provides a direct contact method for users.
+  This field specifies the business phone number in international format (e.g., "+1-702-555-1234"). It provides a direct contact method for users.
 
 - **`email`**  
   This field contains the business email address (e.g., "info@repairshop.com"), offering an additional contact option.
@@ -122,8 +122,8 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 
 - **`geo`**  
   This field specifies the geographic coordinates through a nested object with `@type` set to "GeoCoordinates". It includes:
-  - `latitude`: The latitude value (e.g., 55.7558), representing the north-south position.
-  - `longitude`: The longitude value (e.g., 37.6173), representing the east-west position.
+  - `latitude`: The latitude value (e.g., 36.1147), representing the north-south position.
+  - `longitude`: The longitude value (e.g., -115.1728), representing the east-west position.
 
 ## Properties for `BlogPosting` (Used in `blog.html`)
 
