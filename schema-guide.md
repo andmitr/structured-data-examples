@@ -1,14 +1,18 @@
 # Schema.org Guide
 
-This guide provides a detailed explanation of all Schema.org properties used in the `structured-data-examples` repository, specifically within `product-landing.html`, `service-landing.html`, `online-cinema.html`, `blog.html`, and `tech-blog.html`. Schema.org markup improves how search engines like Google understand and display your web content, such as showing prices, reviews, or maps in search results. All descriptions are based on the official [Schema.org documentation](https://schema.org) (last updated April 2025) and incorporate practical recommendations from Google where applicable. They are crafted to be clear, detailed, and useful for anyone working with these files. This guide avoids examples and focuses on comprehensive, beginner-friendly explanations, adhering to modern web standards.
+This guide provides a detailed explanation of all Schema.org properties used in the `structured-data-examples` repository, specifically within `product-landing.html`, `service-landing.html`, `online-cinema.html`, `blog.html`, `tech-blog.html`, `author-profile.html`, and `software-review.html`. Schema.org markup improves how search engines like Google understand and display your web content, such as showing prices, reviews, or maps in search results. All descriptions are based on the official [Schema.org documentation](https://schema.org) (last updated April 2025) and incorporate practical recommendations from Google where applicable. They are crafted to be clear, detailed, and useful for anyone working with these files. This guide avoids examples and focuses on comprehensive, beginner-friendly explanations, adhering to modern web standards.
 
 ## Table of Contents
 
 1. [Properties for `Product` (Used in `product-landing.html`)](#properties-for-product-used-in-product-landinghtml)  
 2. [Properties for `LocalBusiness` (Used in `service-landing.html`)](#properties-for-localbusiness-used-in-service-landinghtml)  
 3. [Properties for `BlogPosting` (Used in `blog.html`)](#properties-for-blogposting-used-in-bloghtml)  
-4. [Properties for `TechArticle` (Used in `tech-blog.html`)](#properties-for-techarticle-used-in-tech-bloghtml)
-5. [Properties for `Movie` and `VideoObject` (Used in `online-cinema.html`)](#properties-for-movie-and-videoobject-used-in-online-cinemahtml)
+4. [Properties for `TechArticle` (Used in `tech-blog.html`)](#properties-for-techarticle-used-in-tech-bloghtml)  
+5. [Properties for `Movie` and `VideoObject` (Used in `online-cinema.html`)](#properties-for-movie-and-videoobject-used-in-online-cinemahtml)  
+6. [Properties for `ProfilePage` (Used in `author-profile.html`)](#properties-for-profilepage-used-in-author-profilehtml)  
+7. [Properties for `Review` and `SoftwareApplication` (Used in `software-review.html`)](#properties-for-review-and-softwareapplication-used-in-software-reviewhtml)  
+8. [Properties for `FAQPage` (Used in `software-review.html`)](#properties-for-faqpage-used-in-software-reviewhtml)  
+9. [Properties for `BreadcrumbList` (Used in multiple files)](#properties-for-breadcrumblist-used-in-multiple-files)
 
 ## Properties for `Product` (Used in `product-landing.html`)
 
@@ -36,13 +40,13 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 - **`offers`**  
   This field describes the commercial offer for the product using a nested object with `@type` set to "Offer". It includes the following subfields, each critical for e-commerce visibility:
   - `priceCurrency`: Specifies the currency code using the ISO 4217 standard (e.g., "USD" for U.S. dollars), a mandatory field for price interpretation.
-  - `price`: Indicates the product’s price as a decimal number (e.g., 29.99), essential for displaying cost in rich snippets.
+  - `price`: Indicates the product's price as a decimal number (e.g., 29.99), essential for displaying cost in rich snippets.
+  - `validFrom`: Specifies the date and time from which the offer price becomes effective, formatted in ISO 8601 with timezone (e.g., "2025-01-15T00:00:00-08:00"). Required by Google when `priceValidUntil` is present.
+  - `itemCondition`: Describes the condition of the product using a Schema.org URL (e.g., "https://schema.org/NewCondition", "https://schema.org/UsedCondition"). Required for merchant listing rich results.
   - `availability`: Denotes the stock status using a Schema.org URL (e.g., "https://schema.org/InStock" or "https://schema.org/OutOfStock"), vital for informing users of availability.
   - `priceValidUntil`: Sets the expiration date of the price, formatted in ISO 8601 (e.g., "2025-12-31"), ensuring the price remains accurate over time.
   - `url`: Provides the canonical URL of the product page, linking directly to the offer source.
-  - `seller`: A nested object with `@type` set to "Organization" and a `name` field, identifying the entity selling the product.
-  - `itemOffered`: A nested object with `@type` set to "Product" and a `name` field, referencing the product being offered.
-  - `acceptedPaymentMethod`: Lists the payment methods accepted, using Schema.org URLs (e.g., "https://schema.org/Cash", "https://schema.org/CreditCard"), helping users understand payment options.
+  - `seller`: A nested object with `@type` set to "LocalBusiness", identifying the entity selling the product. In `product-landing.html` it includes `name`, `address`, `telephone`, `url`, `geo`, `priceRange`, `openingHoursSpecification`, `sameAs`, and `image`.
 
 - **`review`**  
   This field represents a customer review through a nested object with `@type` set to "Review". It includes the following subfields to provide detailed feedback:
@@ -83,7 +87,10 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 - **`name`**  
   This field holds the business name, such as "City Repair Shop". It is displayed in local search results and should be clear and concise.
 
-- **`url`**  
+- **`image`**  
+  This field contains the URL of the business logo or primary image. It is used by search engines to display a visual in local search results and map listings.
+
+- **`url`**
   This field provides the URL of the business website, enhancing online discoverability and linking to the official site.
 
 - **`address`**  
@@ -115,12 +122,19 @@ This guide provides a detailed explanation of all Schema.org properties used in 
   - `author`: A nested object with `@type` set to "Person", containing `name`.
   - `reviewBody`: The textual content of the review.
   - `datePublished`: The publication date in ISO 8601 format (e.g., "2025-04-03").
-  - `reviewAspect`: The specific aspect being reviewed (e.g., "service").
 
 - **`sameAs`**  
-  This field is an array of URLs linking to the business’s social media profiles (e.g., "https://facebook.com/business"). It enhances online presence and credibility.
+  This field is an array of URLs linking to the business's social media profiles (e.g., "https://facebook.com/business"). It enhances online presence and credibility.
 
-- **`geo`**  
+- **`areaServed`**  
+  This field defines the geographic area where the business provides its services through a nested object with `@type` set to "DefinedRegion". It includes `addressCountry` (ISO 3166-1 code), `addressRegion` (state or region), and `addressLocality` (city), specifying the service coverage area.
+
+- **`makesOffer`**  
+  This field lists the services offered by the business as an array of nested objects with `@type` set to "Offer". Each offer contains:
+  - `itemOffered`: A nested object with `@type` set to "Service", including `name`, `description`, and `serviceType`.
+  - `priceSpecification`: A nested object with `@type` set to "PriceSpecification", containing `priceCurrency` (ISO 4217 code), `minPrice`, and `maxPrice`, defining the price range for the service.
+
+- **`geo`**
   This field specifies the geographic coordinates through a nested object with `@type` set to "GeoCoordinates". It includes:
   - `latitude`: The latitude value (e.g., 36.1147), representing the north-south position.
   - `longitude`: The longitude value (e.g., -115.1728), representing the east-west position.
@@ -346,3 +360,103 @@ This guide provides a detailed explanation of all Schema.org properties used in 
 - **`mainEntityOfPage`**  
   This field links the movie to its canonical page through a nested object with `@type` set to "WebPage". It includes:
   - `@id`: The canonical URL of the movie page (e.g., "https://example.com/movie-title"), ensuring accurate page association.
+
+## Properties for `ProfilePage` (Used in `author-profile.html`)
+
+- **`@context`**  
+  This tag specifies the JSON-LD context, set to "https://schema.org". It is a required element that ensures search engines interpret the markup using the Schema.org vocabulary.
+
+- **`@type`**  
+  This tag defines the type as "ProfilePage", indicating a page whose primary purpose is to profile a person or organization. Google supports this type for author pages, about pages, and employee profiles.
+
+- **`dateCreated`**  
+  This field specifies when the profile was created in ISO 8601 format with UTC (e.g., "2025-01-10T00:00:00Z"). It provides temporal context for the profile.
+
+- **`dateModified`**  
+  This field indicates when the profile was last updated in ISO 8601 format with UTC (e.g., "2025-04-04T12:00:00Z"). Google recommends this field for ProfilePage.
+
+- **`mainEntity`**  
+  This field identifies the person or organization being profiled through a nested object. In `author-profile.html` it uses `@type` set to "Person" with `@id` (a fragment identifier for cross-referencing), and includes:
+  - `name`: The person's full name (e.g., "John Doe").
+  - `description`: A brief bio (e.g., "Software engineer and writer...").
+  - `image`: URL of the person's photo.
+  - `sameAs`: An array of URLs to authoritative profiles (e.g., GitHub, Twitter), used by search engines for entity disambiguation.
+
+- **`hasPart`**  
+  This field links to content created by the profiled person, such as articles. Each entry is a nested object with `@type` set to "BlogPosting" or "TechArticle", including `headline`, `url`, `image`, and `author` (referencing the mainEntity via `@id`).
+
+## Properties for `Review` and `SoftwareApplication` (Used in `software-review.html`)
+
+This file combines an editorial review (`Review`) with the reviewed software (`SoftwareApplication`). Google supports this pattern for software application rich results, which can display star ratings, pricing, and pros/cons in search results.
+
+### `Review`
+
+- **`@type`**  
+  Set to "Review", indicating an evaluative review of an item.
+
+- **`itemReviewed`**  
+  A nested object describing the reviewed item. In `software-review.html` it uses `@type` set to "SoftwareApplication" (see below).
+
+- **`author`**  
+  A nested object with `@type` set to "Person", containing `name` and `url`, identifying the reviewer.
+
+- **`datePublished`**  
+  The review's publication date in ISO 8601 format (e.g., "2025-06-10").
+
+- **`reviewRating`**  
+  A nested object with `@type` set to "Rating", containing `ratingValue` (the score given), `bestRating`, and `worstRating`. Google requires this field for review rich results.
+
+- **`reviewBody`**  
+  The full text of the review, providing detailed user opinions about the product.
+
+- **`positiveNotes`**  
+  A nested object with `@type` set to "ItemList", containing an array of `ListItem` entries. Each item has `position` and `name` (e.g., "Fast first drafts"). Google uses this for pros/cons display in editorial review rich results.
+
+- **`negativeNotes`**  
+  Same structure as `positiveNotes`, listing the drawbacks of the product.
+
+### `SoftwareApplication`
+
+- **`@type`**  
+  Set to "SoftwareApplication", identifying the reviewed software.
+
+- **`name`**  
+  The software's name (e.g., "Example AI Writer").
+
+- **`applicationCategory`**  
+  The category of the application (e.g., "BusinessApplication", "UtilitiesApplication"). Helps search engines classify the software.
+
+- **`operatingSystem`**  
+  The platform where the software runs (e.g., "Web", "Windows", "iOS").
+
+- **`offers`**  
+  A nested object with `@type` set to "Offer", containing `price` and `priceCurrency`. Required by Google for software application rich results.
+
+- **`aggregateRating`**  
+  A nested object with `@type` set to "AggregateRating", representing the overall rating across all reviews. Includes `ratingValue`, `bestRating`, `worstRating`, and `reviewCount`. Required by Google for software app star ratings in search results.
+
+## Properties for `FAQPage` (Used in `software-review.html`)
+
+- **`@type`**  
+  Set to "FAQPage", indicating a page with a list of question-and-answer pairs. Google can display FAQ rich results directly in search.
+
+- **`mainEntity`**  
+  An array of question-and-answer objects. Each entry includes:
+  - `@type`: Set to "Question".
+  - `name`: The question text.
+  - `acceptedAnswer`: A nested object with `@type` set to "Answer" and `text` containing the answer.
+
+Google requires that the marked-up questions and answers are visible on the page and match the structured data.
+
+## Properties for `BreadcrumbList` (Used in multiple files)
+
+`BreadcrumbList` represents the hierarchical navigation path of a page. Google requires it as its own top-level item (not nested inside another type). It is used in `blog.html`, `tech-blog.html`, `online-cinema.html`, and `software-review.html`.
+
+- **`@type`**  
+  Set to "BreadcrumbList".
+
+- **`itemListElement`**  
+  An array of objects with `@type` set to "ListItem", each representing one step in the breadcrumb path:
+  - `position`: An integer indicating the step's order (e.g., 1, 2, 3).
+  - `name`: The label displayed for this step (e.g., "Home", "Reviews").
+  - `item`: The URL of the step's page (as a string) or a nested object with `@id` containing the URL.
