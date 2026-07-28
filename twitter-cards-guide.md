@@ -2,6 +2,28 @@
 
 This guide provides a detailed explanation of all Twitter Card fields and tags used in the `structured-data-examples` repository. Twitter Cards enhance the presentation of shared content on Twitter, such as displaying images or summaries. All descriptions are based on the official [Twitter Cards documentation](https://developer.twitter.com/en/docs/twitter-for-websites/cards) (last updated April 2025) and are crafted to be clear, detailed, and useful for beginners, adhering to modern web standards.
 
+## Tags for `summary`
+
+The `summary` card type displays a small image alongside a title and description. It is used in `author-profile.html` for profile pages.
+
+- **`twitter:card`**  
+  This tag specifies the type of Twitter Card, set to "summary". It displays a smaller image thumbnail alongside the title and description, suitable for profile pages and shorter content.
+
+- **`twitter:site`**  
+  This tag provides the Twitter handle of the website, prefixed with "@" (e.g., "@blogTwitter"). It identifies the account associated with the content.
+
+- **`twitter:title`**  
+  This tag contains the title displayed on Twitter. It should be kept to approximately 70 characters to avoid truncation.
+
+- **`twitter:description`**  
+  This tag provides a summary of the content, displayed on Twitter. It should be between 100 and 200 characters to fit well within the platform's display limits.
+
+- **`twitter:image`**  
+  This tag contains the URL of the image to be displayed on the Twitter Card. For the `summary` card, the image is displayed as a small thumbnail.
+
+- **`twitter:image:alt`**  
+  This tag provides a textual description of the image, such as "Photo of John Doe". It is essential for accessibility.
+
 ## Tags for `summary_large_image`
 
 - **`twitter:card`**  
