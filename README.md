@@ -25,81 +25,48 @@ Graph](https://ogp.me/) protocols, helping developers improve SEO, enable rich s
 
 Structured data markup helps search engines and social platforms understand the content of web pages more effectively. By implementing Schema.org and Open Graph protocols, developers can:
 - Boost SEO with rich snippets (e.g., product prices, ratings, or business details in search results).
-- Ensure proper rendering of shared links on platforms like Facebook, Twitter, and LinkedIn.
+- Ensure proper rendering of shared links on platforms like Facebook, X (Twitter), and LinkedIn.
 
 This repository contains seven example files demonstrating structured data for common use cases: a product landing page, a service landing page, a blog article page, a tech blog article page, an online cinema page, an author profile page, and a software review page.
 
 ## Included Files
 
-### Product Landing Page
+Each file is a self-contained HTML example with Schema.org and Open Graph markup in the `<head>` section.
 
-- **File**: `product-landing.html`
-- **Description**: This example showcases structured data for an e-commerce product page using Schema.org `Product` type and Open Graph's `product` type.
-- **Key Features**:
-  - **Schema.org**: Includes product details such as name, image, description, brand, SKU, offers (with pricing and availability), shipping details, return policy, and reviews.
-  - **Open Graph**: Uses `og:type="product"` with properties like `og:price:amount`, `og:price:currency`, and `og:brand`.
-- **Use Case**: Perfect for online stores or product-focused landing pages aiming to display rich snippets and improve social sharing.
+### [Product Landing Page](product-landing.html)
 
-### Service Landing Page
+An e-commerce product page with full offer markup: pricing, shipping, return policy, seller details, and customer reviews. Helps online stores display rich product snippets in search results and optimize social sharing.
 
-- **File**: `service-landing.html`
-- **Description**: This example demonstrates structured data for a local service provider (e.g., computer repair) using Schema.org `LocalBusiness` type and Open Graph's `website` type.
-- **Key Features**:
-  - **Schema.org**: Provides business details like name, address, phone, email, opening hours, services offered, pricing range, and customer reviews.
-  - **Open Graph**: Uses `og:type="website"` with general metadata such as title, description, and image.
-- **Use Case**: Ideal for local businesses or service providers looking to enhance local SEO and social media visibility.
+### [Service Landing Page](service-landing.html)
 
-### Blog Article Page
+A local service business page with location, opening hours, service offerings, pricing, area served, and reviews. Designed for local businesses looking to enhance search visibility and social media presence.
 
-- **File**: `blog.html`
-- **Description**: This example demonstrates structured data for a blog article using Schema.org `BlogPosting` type and Open Graph's `article` type.
-- **Key Features**:
-  - **Schema.org**: Includes article details such as headline, description, publication and modification dates, author information, main image, and keywords. Additionally, it features a `BreadcrumbList` for navigation.
-  - **Open Graph**: Uses `og:type="article"` with properties like `og:title`, `og:description`, `og:image`, and article-specific tags such as `article:published_time` and `article:author`.
-- **Use Case**: Ideal for blogs or content-heavy websites aiming to improve SEO, display rich snippets (e.g., publication date, author), and ensure proper social media sharing.
+### [Blog Article Page](blog.html)
 
-### Tech Blog Article Page
+A standard blog article with author info, publication dates, keywords, and breadcrumb navigation. A baseline example for content-heavy websites aiming to display rich article snippets.
 
-- **File**: `tech-blog.html`
-- **Description**: This example demonstrates structured data for a technical blog article using Schema.org `TechArticle` type and Open Graph's `article` type.
-- **Key Features**:
-  - **Schema.org**: Includes technical article details such as headline, description, publication and modification dates, author information, main image, keywords, proficiency level, dependencies, and audience. Additionally, it features a `BreadcrumbList` for navigation.
-  - **Open Graph**: Uses `og:type="article"` with properties like `og:title`, `og:description`, `og:image`, and article-specific tags such as `article:published_time` and `article:author`.
-- **Use Case**: Ideal for technical blogs or educational websites targeting developers, aiming to improve SEO, display rich snippets (e.g., publication date, author), and enhance social media sharing.
+### [Tech Blog Article Page](tech-blog.html)
 
-### Online Cinema Page
+A technical article or tutorial that extends the blog example with proficiency level, dependencies, and target audience. Aimed at educational and developer-focused content.
 
-- **File**: `online-cinema.html`
-- **Description**: This example demonstrates structured data for an online cinema page featuring a movie, using Schema.org `Movie` and `VideoObject` types, along with Open Graph's `video.movie` type.
-- **Key Features**:
-  - **Schema.org**: Includes movie details such as name, description, actors, director, duration, ratings, reviews, and a nested `VideoObject` with video-specific properties like thumbnail, upload date, and interaction statistics. It also features a `BreadcrumbList` for navigation.
-  - **Open Graph**: Uses `og:type="video.movie"` with properties like `og:title`, `og:description`, `og:image`, and video-specific tags such as `video:actor`, `video:director`, and `video:duration`.
-- **Use Case**: Ideal for online cinema or streaming websites aiming to enhance SEO with rich video snippets, improve discoverability, and optimize social media sharing.
+### [Online Cinema Page](online-cinema.html)
 
-### Author Profile Page
+A movie page combining `Movie` and `VideoObject` markup: cast, ratings, reviews, video playback metadata, and interaction statistics. Built for streaming platforms and video-centric websites.
 
-- **File**: `author-profile.html`
-- **Description**: This example demonstrates structured data for an author "About" page using Schema.org `ProfilePage` type and Open Graph's `profile` type.
-- **Key Features**:
-  - **Schema.org**: Defines a `mainEntity` `Person` with name, description, image, and `sameAs` links, plus `hasPart` linking the profile to the author's articles in `blog.html` and `tech-blog.html`.
-  - **Open Graph**: Uses `og:type="profile"` with `profile:first_name`, `profile:last_name`, and `profile:username`.
-- **Use Case**: Ideal for author bio or "About Me" pages that blog articles link to via `article:author`, making the author eligible for Google's Profile Page appearance.
+### [Author Profile Page](author-profile.html)
 
-### Software Review Page
+An author's profile or about page using `ProfilePage` markup. Links to published articles, enabling Google's Profile Page appearance. Useful for blog networks and personal branding.
 
-- **File**: `software-review.html`
-- **Description**: This example demonstrates structured data for an editorial software review article using Schema.org `Review` as the primary type, with `itemReviewed` pointing to a `SoftwareApplication`. It also includes an `FAQPage` and a `BreadcrumbList`.
-- **Key Features**:
-  - **Schema.org**: A top-level `Review` with `author`, `reviewRating`, `reviewBody`, and the `positiveNotes`/`negativeNotes` pros-and-cons lists that Google's product snippet feature supports for editorial reviews.
-  - **Open Graph**: Uses `og:type="article"` with standard title, description, and image tags.
-- **Use Case**: Ideal for independent review articles about software or services, aiming for Google's review rich result (star rating) and pros/cons appearance in search.
+### [Software Review Page](software-review.html)
+
+An editorial software review with ratings, pros and cons lists, FAQ section, and breadcrumb navigation. Designed for independent review articles and affiliate content aiming for Google's review rich result.
 
 ## Usage
 
 To use these examples:
 1. Clone or download this repository: 
 ```zsh
-   git clone https://github.com/andmitr/structured-data-examples.git  
+git clone https://github.com/andmitr/structured-data-examples.git
 ```
 2. Open the HTML files in a text editor or browser to review the markup.
 3. Customize the structured data by replacing placeholder values (e.g., URLs, names, prices) with your own content.
@@ -110,9 +77,7 @@ To use these examples:
 After implementing the structured data, validate it using these tools:
 - **[Google Rich Results Test](https://search.google.com/test/rich-results)**: Checks Schema.org markup for errors and eligibility for rich snippets.
 - **[Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)**: Verifies Open Graph metadata for social media sharing.
-- **[Twitter Card Validator](https://cards-dev.twitter.com/validator)**: Ensures Twitter Card markup works correctly.
-
-Test your pages to resolve any warnings or errors before deployment.
+- **Twitter Card validation**: X (Twitter) no longer provides a public Card Validator. To verify Twitter Card markup, post a tweet containing your URL and check the card preview.
 
 ## Resources
 
@@ -124,7 +89,7 @@ Additionally, refer to the following guides for detailed explanations of the fie
 For more details on the structured data protocols used in these examples, explore the official documentation:
 - **[Schema.org](https://schema.org)** - Comprehensive vocabulary for structured data markup.
 - **[Open Graph](https://ogp.me/)** - Protocol for enhancing social media sharing.
-- **[Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards)** - Twitter-specific markup for rich media previews.
+
 
 ## License
 
